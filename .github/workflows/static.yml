@@ -34,10 +34,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
+        run: |
+          mkdir deploy
+          cp -r app/html/* deploy/
+          cp -r app/css deploy/
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './app/html'
+          path: 'deploy'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
