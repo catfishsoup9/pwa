@@ -1,0 +1,12 @@
+extends ./template/page
+
+block title
+  | Hello world!
+
+block content
+
+  include ./includes/header
+
+  include ./mixins/caption
+  main.main
+    +caption('Hello world', 'red')

@@ -1,0 +1,12 @@
+extends ./template/page
+
+block title
+  | Goodbye world!
+
+block content
+
+  include ./includes/header
+
+  include ./mixins/caption
+  main.main
+    +caption('Goodbye world', 'blue')
