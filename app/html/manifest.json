@@ -1,7 +1,7 @@
 {
   "name": "PugStarter App",
   "short_name": "PugStarter",
-  "start_url": "hello.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
