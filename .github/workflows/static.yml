@@ -37,9 +37,9 @@ jobs:
         run: |
           mkdir deploy
           cp -r app/html/* deploy/
-          cp -r app/css/* deploy/
-          cp -r app/fonts/* deploy/
-          cp -r app/img/* deploy/
+          cp -r app/css/* deploy/css/
+          cp -r app/fonts/* deploy/fonts/
+          cp -r app/img/* deploy/img/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
