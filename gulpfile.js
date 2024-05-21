@@ -19,4 +19,10 @@ gulp.task('watch', () => {
   gulp.watch('app/scss/**/*.scss', gulp.series('scss-compile'));
 });
 
+gulp.task('copy-html', () => {
+  return gulp.src('app/html/hello.html')
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', gulp.series(gulp.parallel('pug-compile', 'scss-compile', 'copy-html')));
 gulp.task('default', gulp.series(gulp.parallel('pug-compile', 'scss-compile'), 'watch'));
